@@ -1,0 +1,69 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Saputra",
+    "email": "saputra@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+
+###
+//Get All Users
+GET http://localhost:5000/users
+
+
+###
+//Get Single Users
+GET http://localhost:5000/users/6872268a-7838-4ad6-a1a3-441acf768254
+
+###
+//Update Users
+PATCH http://localhost:5000/users/10b32690-df2e-4972-9460-e1a0ab32501e
+Content-Type: application/json
+
+{
+    "name": "Dwi Saputra",
+    "email": "dwisaputra@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//Delete Users
+DELETE http://localhost:5000/users/cc0b360e-7dd6-4812-8cfc-c72a293130f3
+
+
+###
+//Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "adi3947@gmail.com",
+    "password": "123456"
+}
+
+###
+//Login Users
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "dwisaputra@gmail.com",
+    "password": "123456"
+}
+
+
+
+
+###
+// Users
+GET http://localhost:5000/me
+
+###
+//Logout Users
+DELETE  http://localhost:5000/logout
