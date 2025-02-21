@@ -2,6 +2,20 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
+    "name": "Adi Dwi",
+    "email": "adi3947@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+
+###
+//Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
     "name": "Saputra",
     "email": "saputra@gmail.com",
     "password": "123456",
@@ -17,7 +31,7 @@ GET http://localhost:5000/users
 
 ###
 //Get Single Users
-GET http://localhost:5000/users/6872268a-7838-4ad6-a1a3-441acf768254
+GET http://localhost:5000/users/f35e2493-e3bf-4e50-92ac-dc007f8f1ce3
 
 ###
 //Update Users
@@ -48,12 +62,12 @@ Content-Type: application/json
 }
 
 ###
-//Login Users
+//Login User
 POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email": "dwisaputra@gmail.com",
+    "email": "saputra@gmail.com",
     "password": "123456"
 }
 
@@ -67,3 +81,39 @@ GET http://localhost:5000/me
 ###
 //Logout Users
 DELETE  http://localhost:5000/logout
+
+
+###
+//Get All Surah
+GET http://localhost:5000/surah
+
+###
+//Get One Surah
+GET http://localhost:5000/surah/98fcbe42-64a1-4627-a081-ff25b8e5ae1b
+
+
+###
+//Add Surah
+POST http://localhost:5000/surah
+Content-Type: application/json
+
+{
+    "name": "kjashlsajllasn",
+    "ayat": 100
+}
+
+###
+//Update Surah
+PATCH http://localhost:5000/surah/98fcbe42-64a1-4627-a081-ff25b8e5ae1b
+Content-Type: application/json
+
+{
+    "name": "appalaaalalal",
+    "ayat": 200
+}
+
+
+###
+//Delete Surah
+DELETE http://localhost:5000/surah/a60fdd80-8429-41aa-bfd7-a8e316fdbe5e
+
